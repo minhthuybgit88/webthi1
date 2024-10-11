@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  
+    <title>Mô phỏng Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <style>
+        /*Hien thi menu dang 1 colunm*/
+        @media only screen and (max-width:48rem){
+            .nav-bar{
+                flex-direction: column;
+            }
+        }
+    </style>
+    <button class="nav-toggle">&#9776;</button>
+   <!-- Nav Bar -->
+   <div class="nav-bar">
+    <a href="#">Trang chủ</a>
+    <a href="#">Tìm kiếm</a>
+    <a href="#">Giới thiệu</a>
+    <a href="#">Cài đặt</a>
+    </div>
+    <!-- Header -->
+    <header class="header">
+        <h1>Website Header</h1>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+    </main>
+    <script>
+        const toggleButton = document.querySelector('.nav-toggle');
+        const navBar = document.querySelector('.nav-bar');
+    
+        toggleButton.addEventListener('click', () => {
+            navBar.style.display = navBar.style.display === 'flex' ? 'none' : 'flex';
+        });
+    </script>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="copyright">
+            <p class="copyright-p">Email:nguyenminhthuybg88@gmail.com<br>Điện thoai: 0983.829.9xx<br>© 2023-2024 - Bản quyền Minh Thuý</p>
+          </div>
+    </footer>
+
+</body>
+</html>

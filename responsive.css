@@ -1,0 +1,47 @@
+/* Media Queries cho màn hình nhỏ hơn hien thi theo chieu doc 768px */
+@media only screen and (max-width:768px){
+    .nav-bar{
+        flex-direction: column;
+        text-align: center;
+    }
+    }
+/* Định dạng cho thiết bị có kích thước nhỏ */
+@media only screen and (min-width: 240px) and (max-width: 480px) {
+    .nav-bar {
+        flex-direction: column;
+        grid-template-columns: repeat(1, 1fr); /* Hiển thị dạng lưới với 1 cột */
+        display: none; /* Ẩn menu*/
+    }
+    .nav-toggle {
+        display: block;
+        background-color: transparent;
+        border: none;
+        font-size: 15px;
+        cursor: pointer;
+        color: #333;
+        margin-left: 15px;
+    }
+    .nav-toggle:hover {
+        color: red;
+    }
+}
+
+/* Định dạng cho thiết bị di động */
+@media (min-width: 768px) {
+    .main-content {
+    grid-template-columns: repeat(2, 1fr); /* Hiển thị dạng lưới với 2 cột */
+        }
+        .nav-toggle {
+            display: none;
+}
+}
+/* Media query cho màn hình desktop */
+@media (min-width: 1025px) {
+    .main-content {
+        grid-template-columns: repeat(4, 1fr); /* Hiển thị 4 cột cho màn hình desktop */
+    }
+    /* Tăng chiều cao của header trên desktop */
+    .header {
+        padding: 40px;
+    }
+}
